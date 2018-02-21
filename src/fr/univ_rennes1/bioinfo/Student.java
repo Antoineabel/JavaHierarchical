@@ -19,23 +19,24 @@ public class Student {
 	 * @param grade
 	 */
 	public Student(String identifier, double grade) {
-		// TODO: DO SOMETHING HERE
+		this.ident=identifier;
+		this.grade=grade;
 	}
 	
 	public Student(String identifier) {
-		// TODO: DO SOMETHING HERE
+		this.ident=identifier;
 	}
 	
 	public String getIdentifier() {
-		// TODO: DO SOMETHING HERE
+		return ident;
 	}
 	
 	public double getGrade() {
-		// TODO: DO SOMETHING HERE
+		return grade;
 	}
 	
 	public void setGrade(double newGrade) {
-		// TODO: DO SOMETHING HERE
+		this.grade=newGrade;
 	}
 	
 
