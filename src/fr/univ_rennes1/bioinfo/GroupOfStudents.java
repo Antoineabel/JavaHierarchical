@@ -10,15 +10,29 @@ import java.util.ArrayList;
 public class GroupOfStudents extends ArrayList<Student> {
 	
 	public double getMinGrade() {
-		// TODO: DO SOMETHING HERE and uncomment the method call in the main(...)
+		double min =Double.MAX_VALUE;
+		for (Student s : this) {
+			if(s.getGrade()<min)
+				min = s.getGrade();
+		}
+		return min;
 	}
 	
 	public double getMaxGrade() {
-		// TODO: DO SOMETHING HERE and uncomment the method call in the main(...)
+		double max =0;
+		for (Student s : this) {
+			if(s.getGrade()>max)
+				max = s.getGrade();
+		}
+		return max;
 	}
 	
 	public double getAverageGrade() {
-		// TODO: DO SOMETHING HERE and uncomment the method call in the main(...)
+		double avg =0;
+		for (Student s : this) {
+			avg += s.getGrade();
+		}
+		return avg/this.size();
 	}
 
 	/**
@@ -38,10 +52,9 @@ public class GroupOfStudents extends ArrayList<Student> {
 		m1bio.add(geo);
 		m1bio.add(donald);
 		
-		// TODO: uncomment when needed
-		//System.out.println("Grade min: " + m1bio.getMinGrade());
-		//System.out.println("Grade max: " + m1bio.getMaxGrade());
-		//System.out.println("Average: " + m1bio.getAverageGrade());
+		System.out.println("Grade min: " + m1bio.getMinGrade());
+		System.out.println("Grade max: " + m1bio.getMaxGrade());
+		System.out.println("Average: " + m1bio.getAverageGrade());
 	}
 
 }
